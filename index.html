@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b63f6">
+  <title>Você ganhou um prêmio!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="title">
+      <div class="badge">🎉 PROMOÇÃO ESPECIAL</div>
+
+      <div class="gift" aria-hidden="true">🎁</div>
+
+      <p class="small">PARABÉNS!</p>
+      <h1 id="title">Você foi selecionado para receber um prêmio!</h1>
+      <p class="subtitle">
+        Sua participação foi aprovada. Clique no botão abaixo para liberar seu prêmio.
+      </p>
+
+      <div class="prize">
+        <span class="prize-icon">🏆</span>
+        <div>
+          <strong>PRÊMIO ESPECIAL</strong>
+          <span>Disponível para você</span>
+        </div>
+      </div>
+
+      <button id="claimButton" type="button">
+        <span>🎁</span>
+        <span>Receber prêmio</span>
+      </button>
+
+      <p id="status" class="status" aria-live="polite"></p>
+      <p class="secure">🔒 Oferta promocional • Acesso gratuito</p>
+    </section>
+  </main>
+
+  <!--
+    IMPORTANTE:
+    Coloque o arquivo MP3 dentro da pasta "audio" com exatamente este nome:
+    audio/premio.mp3
+
+    O áudio NÃO toca ao abrir a página.
+    Ele só é iniciado após o usuário tocar/clicar em "Receber prêmio".
+  -->
+  <audio id="prankAudio" preload="auto" playsinline>
+    <source src="audio/premio.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
